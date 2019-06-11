@@ -4,7 +4,7 @@
 import os
 import datetime
 import time
-choice=int(input("Enter an option from following:\n1.Create a new empty file\n2.create new empty multiple files\n3.Check whether a file is created or not\n4.Create a file and enter some data\n5.append to already created file\n6.Redirect Content of one file and append to an existing file\n"))
+choice=int(input("Enter an option from following:\n1.Create a new empty file\n2.create new empty multiple files\n3.Check whether a file is created or not\n4.Update access and modification time.\n5.update access and modification time of a file to that of another file\n"))
 if choice==1:
     loc=input("Enter file name with path to create it\n")
     myfile=open(loc,"w")
@@ -16,7 +16,6 @@ elif choice==2:
         loc=input("Enter name of file "+str(i)+" with location\n")
         myfile=open(loc,"w")
         myfile.close()
-        
 elif choice==3:
     loc=input("Enter file name with path to check whether present or not\n")
     try:
@@ -26,8 +25,11 @@ elif choice==3:
         print("File not present")
 elif choice==4:
     loc=input("Enter file name with path to create it\n")
-    print(os.path.get+(loc))
-    print(os.path.getmtime(loc))
+    os.utime(loc)
+
 elif choice==5:
-    loc=input("Enter file name with path to append data to it\n")
+    lop=input("Enter File path from which upadated date and time is extracted\n")
+    loc=input("Enter File path To Update date and time\n")
+
+    os.utime(loc,(os.path.getmtime(lop),os.path.getmtime(lop)))
    
