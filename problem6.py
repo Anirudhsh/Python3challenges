@@ -2,7 +2,7 @@
 
 #Python program that implements the "cat" command and its options through file handling
 
-choice=int(input("Enter an option from following:\n1.Print the data of a single file\n2.Print data of multiple files\n3.Create a new empty file\n4.Create a file and enter some data\n5.Display line number while printing(similar to -n in cat)\n6.Redirect Content of one file and append to an existing file\n"))
+choice=int(input("Enter an option from following:\n1.Print the data of a single file\n2.Print data of multiple files\n3.Create a new empty file\n4.Create a file and enter some data\n5.Append data to already created file\n6.Redirect Content of one file and append to an existing file\n"))
 if choice==1:
     loc=input("Enter name of file with location\n")
     myfile1=open(loc,"r")
