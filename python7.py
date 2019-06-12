@@ -24,7 +24,7 @@ elif choice==3:
     except:
         print("File not present")
 elif choice==4:
-    loc=input("Enter file name with path to create it\n")
+    loc=input("Enter file name with path to change its modification and time to current time\n")
     os.utime(loc)
 
 elif choice==5:
