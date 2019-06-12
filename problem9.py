@@ -23,10 +23,8 @@ for i in worlist:
         dicwor[i]+=1
     else:
         dicwor[i]=1
-print(dicwor)
 slis=list(dicwor.values())
 slis.sort(reverse=True)
-print(slis)
 liw=[]
 for i in slis:
     for j in dicwor:
@@ -40,6 +38,14 @@ for i in clis:
         if dichar[j]==i:
             spush=j+" number= "+str(dichar[j])
             lic.append(spush)
+for i in dicwor:
+    if dicwor[i]>5:
+        #dicwor.pop(i)
+        while i in worlist:
+            worlist.remove(i)
+mystr=""
+for j in worlist:
+    mystr=mystr+j+" "
 for i in slis:
     for j in dicwor:
         if dicwor[j]==i:
